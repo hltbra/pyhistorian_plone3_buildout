@@ -9,7 +9,7 @@ Using this buildout
 ===================
 
 $ python bootstrap.py
-$ bin/buildout
+$ ./build.sh
 
 
 Running myproduct tests::
