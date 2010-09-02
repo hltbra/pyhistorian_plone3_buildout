@@ -20,7 +20,7 @@ into your Zope instance.
   ``/path/to/instance/etc/package-includes`` directory.  The file
   should only contain this::
 
-    <include package="myproduct.myproduct" />
+    <include package="myproduct" />
 
 .. _pythonproducts: http://plone.org/products/pythonproducts
 
@@ -42,7 +42,7 @@ recipe to manage your project, you can do this:
     recipe = plone.recipe.zope2instance
     ...
     zcml =
-        myproduct.myproduct
+        myproduct
       
 * Re-run buildout, e.g. with:
 

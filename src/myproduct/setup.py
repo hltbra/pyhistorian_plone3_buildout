@@ -22,7 +22,7 @@ long_description = (
     'Detailed Documentation\n'
     '**********************\n'
     + '\n' +
-    read('myproduct', 'myproduct', 'README.txt')
+    read('myproduct', 'README.txt')
     + '\n' +
     'Contributors\n'
     '************\n'
@@ -58,7 +58,7 @@ setup(name='myproduct',
                         ],
       tests_require=tests_require,
       extras_require=dict(tests=tests_require),
-      test_suite='myproduct.myproduct.tests.test_docs.test_suite',
+      test_suite='myproduct.tests.test_docs.test_suite',
       entry_points="""
       # -*- entry_points -*-
       [z3c.autoinclude.plugin]
