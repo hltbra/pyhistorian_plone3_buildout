@@ -1,9 +1,9 @@
 """Common configuration constants
 """
 
-PROJECTNAME = 'myproduct.myproduct'
+PROJECTNAME = 'myproduct'
 
 ADD_PERMISSIONS = {
     # -*- extra stuff goes here -*-
-    'mycontent': 'myproduct.myproduct: Add mycontent',
+    'mycontent': 'myproduct: Add mycontent',
 }

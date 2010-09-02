@@ -6,7 +6,7 @@ import doctest
 
 from Testing import ZopeTestCase as ztc
 
-from myproduct.myproduct.tests import base
+from myproduct.tests import base
 
 
 def test_suite():
@@ -14,7 +14,7 @@ def test_suite():
 
 #        # Demonstrate the main content types
 #        ztc.ZopeDocFileSuite(
-#            'README.txt', package='myproduct.myproduct',
+#            'README.txt', package='myproduct',
 #            test_class=base.FunctionalTestCase,
 #            optionflags=doctest.REPORT_ONLY_FIRST_FAILURE |
 #                doctest.NORMALIZE_WHITESPACE | doctest.ELLIPSIS),

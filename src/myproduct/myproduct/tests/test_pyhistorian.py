@@ -18,6 +18,14 @@ class PyhistorianFirstStory(Story):
 
 
 class PassingScenario(Scenario):
+    @Given('the given pass')
+    def given_pass(self):
+        pass
+
+    @When('the when pass')
+    def when_pass(self):
+        pass
+
     @Then('it should pass')
     def pass_ok(self):
         pass

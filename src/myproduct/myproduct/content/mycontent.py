@@ -9,8 +9,8 @@ from Products.ATContentTypes.content import schemata
 
 # -*- Message Factory Imported Here -*-
 
-from myproduct.myproduct.interfaces import Imycontent
-from myproduct.myproduct.config import PROJECTNAME
+from myproduct.interfaces import Imycontent
+from myproduct.config import PROJECTNAME
 
 mycontentSchema = schemata.ATContentTypeSchema.copy() + atapi.Schema((
 

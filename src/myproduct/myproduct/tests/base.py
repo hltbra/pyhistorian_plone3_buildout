@@ -36,8 +36,8 @@ def setup_product():
     # This can of course use <include /> to include other packages.
 
     fiveconfigure.debug_mode = True
-    import myproduct.myproduct
-    zcml.load_config('configure.zcml', myproduct.myproduct)
+    import myproduct
+    zcml.load_config('configure.zcml', myproduct)
     fiveconfigure.debug_mode = False
 
     # We need to tell the testing framework that these products
@@ -51,14 +51,14 @@ def setup_product():
     # We may also need to load dependencies, e.g.:
     #   ztc.installPackage('borg.localrole')
 
-    ztc.installPackage('myproduct.myproduct')
+    ztc.installPackage('myproduct')
 
 # The order here is important: We first call the (deferred) function
 # which installs the products we need for this product. Then, we let
 # PloneTestCase set up this product on installation.
 
 setup_product()
-ptc.setupPloneSite(products=['myproduct.myproduct'])
+ptc.setupPloneSite(products=['myproduct'])
 
 
 class TestCase(ptc.PloneTestCase):

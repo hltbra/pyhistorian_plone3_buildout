@@ -2,7 +2,7 @@
 <rolemap>
   <permissions>
     <!-- -*- extra stuff goes here -*- -->
-    <permission name="myproduct.myproduct: Add mycontent" acquire="False">
+    <permission name="myproduct: Add mycontent" acquire="False">
       <role name="Manager" />
       <role name="Contributor" />
     </permission>
