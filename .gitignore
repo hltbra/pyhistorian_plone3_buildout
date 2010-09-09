@@ -8,5 +8,6 @@ downloads
 eggs
 fake-eggs
 parts
+var
 *.egg-info
 *.egg
