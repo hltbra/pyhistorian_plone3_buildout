@@ -1,35 +1,30 @@
 import unittest
 from pyhistorian import *
-from base import TestCase
+from base import TestCase, FunctionalTestCase
 
 
-####
-# todo:
-# make a story with a couple of scenarios
-# and try using plone stuff on that
-# like creating content type
-####
 class PyhistorianFirstStory(Story):
     """
     As a smart plone guy
     I want to use pyhistorian
     So that I can try some BDD
     """
+    scenarios = ['PassingScenario']
 
 
-class PassingScenario(Scenario):
-    @Given('the given pass')
-    def given_pass(self):
-        pass
+class PassingScenario(Scenario, TestCase):
+    @Given('I am logged as portal owner')
+    def given2_pass(self):
+        self.setUp()
+        self.loginAsPortalOwner()
 
-    @When('the when pass')
-    def when_pass(self):
-        pass
+    @When('I create a folder, titled "My First Folder"')
+    def when2_pass(self):
+        self.portal.invokeFactory(type_name='Folder', id='folder1', title='My First Folder')
 
-    @Then('it should pass')
-    def pass_ok(self):
-        pass
-
+    @Then('I should see the title "My First Folder" in the root folder')
+    def pass2_ok(self):
+        self.assertEquals('My First Folder', self.portal.folder1.title)
 
 
 def test_suite():
