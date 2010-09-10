@@ -28,4 +28,4 @@ class PassingScenario(Scenario, TestCase):
 
 
 def test_suite():
-    return unittest.TestSuite([suite.PyhistorianSuite(PyhistorianFirstStory())])
+    return suite.PyhistorianSuite(PyhistorianFirstStory())
