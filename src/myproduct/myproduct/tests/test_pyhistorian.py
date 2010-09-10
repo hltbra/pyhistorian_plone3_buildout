@@ -1,6 +1,6 @@
 import unittest
-from pyhistorian import *
-from base import TestCase, FunctionalTestCase
+from pyhistorian import suite, Story, Scenario, Given, When, Then
+from base import TestCase
 
 
 class PyhistorianFirstStory(Story):
@@ -14,16 +14,16 @@ class PyhistorianFirstStory(Story):
 
 class PassingScenario(Scenario, TestCase):
     @Given('I am logged as portal owner')
-    def given2_pass(self):
+    def login_as_portal_owner(self):
         self.setUp()
         self.loginAsPortalOwner()
 
     @When('I create a folder, titled "My First Folder"')
-    def when2_pass(self):
+    def create_folder1(self):
         self.portal.invokeFactory(type_name='Folder', id='folder1', title='My First Folder')
 
     @Then('I should see the title "My First Folder" in the root folder')
-    def pass2_ok(self):
+    def check_title(self):
         self.assertEquals('My First Folder', self.portal.folder1.title)
 
 
