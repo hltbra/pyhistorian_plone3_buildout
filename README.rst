@@ -8,8 +8,9 @@ Yes, we are trying to run pyhistorian with Plone 3!
 Using this buildout
 ===================
 
-$ python bootstrap.py
-$ ./build.sh
+::
+    $ python bootstrap.py
+    $ ./build.sh
 
 
 Running myproduct tests::
