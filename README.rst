@@ -9,6 +9,7 @@ Using this buildout
 ===================
 
 ::
+
     $ python bootstrap.py
     $ ./build.sh
 
