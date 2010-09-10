@@ -14,7 +14,7 @@ $ ./build.sh
 
 Running myproduct tests::
 
-    $ bin/instance test -s myproduct
+    $ bin/instance test -s myproduct -vv
 
 
 
