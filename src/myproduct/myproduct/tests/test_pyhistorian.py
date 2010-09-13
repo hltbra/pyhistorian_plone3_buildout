@@ -1,5 +1,6 @@
 import unittest
-from pyhistorian import suite, Story, Scenario, Given, When, Then
+from pyhistorian import Story, Scenario, Given, When, Then
+from pyhistorian import plone
 from base import TestCase
 
 
@@ -28,4 +29,4 @@ class PassingScenario(Scenario, TestCase):
 
 
 def test_suite():
-    return suite.PyhistorianSuite(PyhistorianFirstStory())
+    return plone.PyhistorianPloneSuite(PyhistorianFirstStory())
