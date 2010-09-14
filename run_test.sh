@@ -1,3 +1,3 @@
 #!/bin/bash
 
-bin/instance test -s myproduct -vvvv
+bin/instance test -s myproduct -vv
